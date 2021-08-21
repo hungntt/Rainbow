@@ -35,6 +35,20 @@ python main.py --target-update 2000 \
                --evaluation-interval 10000
 ```
 
+Playing Pong with Rainbow
+```
+python main.py --game pong \
+               --target-update 2000 \
+               --T-max 300000 \
+               --learn-start 1600 \
+               --memory-capacity 100000 \
+               --replay-frequency 1 \
+               --multi-step 20 \
+               --architecture data-efficient \
+               --hidden-size 256 \
+               --learning-rate 0.0001 \
+               --evaluation-interval 10000
+```
 Note that pretrained models from the [`1.3`](https://github.com/Kaixhin/Rainbow/releases/tag/1.3) release used a (slightly) incorrect network architecture. To use these, change the padding in the first convolutional layer from 0 to 1 (DeepMind uses "valid" (no) padding).
 
 Requirements
